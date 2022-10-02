@@ -12,14 +12,16 @@ class TaskScreen extends StatelessWidget {
     return Stack(
       children: [
         Image.asset(
-            "images/bg1.jpg",
-            height: MediaQuery.of(context).size.height,
-            width: MediaQuery.of(context).size.width,
-            fit: BoxFit.cover,
+          "images/bg1.jpg",
+          height: MediaQuery.of(context).size.height,
+          width: MediaQuery.of(context).size.width,
+          fit: BoxFit.cover,
         ),
         Scaffold(
           backgroundColor: Colors.transparent,
           floatingActionButton: FloatingActionButton(
+            tooltip: 'Add items',
+            elevation: 20,
             backgroundColor: Colors.lightBlueAccent,
             child: const Icon(
               Icons.add,
@@ -49,11 +51,11 @@ class TaskScreen extends StatelessWidget {
                     children: [
                       const CircleAvatar(
                         child: Icon(
-                          Icons.list,
-                          size: 40,
-                          color: Colors.lightBlueAccent,
+                          Icons.edit_location_alt_outlined,
+                          size: 50,
+                          color: Colors.white,
                         ),
-                        backgroundColor: Colors.white,
+                        backgroundColor: Colors.transparent,
                         radius: 34,
                       ),
                       const SizedBox(
@@ -78,10 +80,12 @@ class TaskScreen extends StatelessWidget {
               ),
               Expanded(
                 child: Container(
-                  padding: const EdgeInsets.symmetric(horizontal: 20),
-                  height: 300.0,
+                  padding: const EdgeInsets.only(top:80, left: 40, right: 20, bottom: 80),
                   decoration: const BoxDecoration(
-                    image: DecorationImage(image: AssetImage('images/bg2.jpg'), fit: BoxFit.cover),
+                    image: DecorationImage(
+                      image: AssetImage('images/bg6.jpg'),
+                      fit: BoxFit.fill,
+                    ),
                     borderRadius: BorderRadius.only(
                       topLeft: Radius.circular(20),
                       topRight: Radius.circular(20),

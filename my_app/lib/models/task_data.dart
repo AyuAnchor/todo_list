@@ -1,5 +1,6 @@
 import 'package:flutter/foundation.dart';
 import 'package:my_app/models/task.dart';
+// import 'package:shared_preferences/shared_preferences.dart';
 import 'dart:collection';
 
 class TaskData extends ChangeNotifier {
@@ -32,4 +33,11 @@ class TaskData extends ChangeNotifier {
     _tasks.remove(task);
     notifyListeners();
   }
+
+  void editTask(Task task) {
+    task.toggleDone();
+    notifyListeners();
+  }
+
+  
 }

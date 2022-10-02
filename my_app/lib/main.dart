@@ -12,9 +12,13 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return ChangeNotifierProvider(
       create: (context) => TaskData(),
-      child: const MaterialApp(
+      child: MaterialApp(
+        theme: ThemeData.dark().copyWith(
+          primaryColor: Colors.white,
+          unselectedWidgetColor: Colors.white
+        ),
         debugShowCheckedModeBanner: false,
-        home: TaskScreen(),
+        home: const TaskScreen(),
       ),
     );
   }
